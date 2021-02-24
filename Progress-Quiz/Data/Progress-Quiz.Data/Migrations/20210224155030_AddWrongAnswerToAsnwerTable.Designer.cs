@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Progress_Quiz.Data;
 
 namespace Progress_Quiz.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210224155030_AddWrongAnswerToAsnwerTable")]
+    partial class AddWrongAnswerToAsnwerTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -18,14 +20,14 @@ namespace Progress_Quiz.Data.Migrations
                 .HasAnnotation("ProductVersion", "5.0.3")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Progress_Quiz.Models.CorrectAnswer", b =>
+            modelBuilder.Entity("Progress_Quiz.Models.Answer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Answer")
+                    b.Property<string>("CorrectAnswer")
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
@@ -33,12 +35,17 @@ namespace Progress_Quiz.Data.Migrations
                     b.Property<int>("QuestionId")
                         .HasColumnType("int");
 
+                    b.Property<string>("WrongAnswer")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("QuestionId")
                         .IsUnique();
 
-                    b.ToTable("CorrectAnswers");
+                    b.ToTable("Answers");
                 });
 
             modelBuilder.Entity("Progress_Quiz.Models.Question", b =>
@@ -63,44 +70,11 @@ namespace Progress_Quiz.Data.Migrations
                     b.ToTable("Questions");
                 });
 
-            modelBuilder.Entity("Progress_Quiz.Models.WrongAnswer", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Answer")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<int>("QuestionId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("QuestionId");
-
-                    b.ToTable("WrongAnswers");
-                });
-
-            modelBuilder.Entity("Progress_Quiz.Models.CorrectAnswer", b =>
+            modelBuilder.Entity("Progress_Quiz.Models.Answer", b =>
                 {
                     b.HasOne("Progress_Quiz.Models.Question", "Question")
                         .WithOne("Answer")
-                        .HasForeignKey("Progress_Quiz.Models.CorrectAnswer", "QuestionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Question");
-                });
-
-            modelBuilder.Entity("Progress_Quiz.Models.WrongAnswer", b =>
-                {
-                    b.HasOne("Progress_Quiz.Models.Question", "Question")
-                        .WithMany("WrongAnswers")
-                        .HasForeignKey("QuestionId")
+                        .HasForeignKey("Progress_Quiz.Models.Answer", "QuestionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -110,8 +84,6 @@ namespace Progress_Quiz.Data.Migrations
             modelBuilder.Entity("Progress_Quiz.Models.Question", b =>
                 {
                     b.Navigation("Answer");
-
-                    b.Navigation("WrongAnswers");
                 });
 #pragma warning restore 612, 618
         }

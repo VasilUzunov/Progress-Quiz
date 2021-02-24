@@ -1,0 +1,62 @@
+﻿<div class="container vertical-center container-fluid" style="width: 40%">
+    <div>
+        <h1 id="category">Category</h1>
+    </div>
+    <div id="quizmain">
+        <h3 id="questionNum">Question 1 of 5</h3>
+        <p id="countdown" style="float: right; font-size: 30px"></p>
+        <p id="qtext">Question</p>
+        <form>
+            <div id="altcontainer">
+                <label id="label1" class="radiocontainer checkedlabel">
+                    Here Will Be The Question!!!
+                    <input id="1" type="radio" name="quiz" onclick="" value="1" />
+                    <span class="checkmark"></span>
+                </label>
+                <label id="label2" class="radiocontainer checkedlabel">
+                    Here Will Be The Question!!!
+                    <input id="2" type="radio" name="quiz" onclick="" value="2" />
+                    <span class="checkmark"></span>
+                </label>
+                <label id="label3" class="radiocontainer checkedlabel">
+                    Here Will Be The Question!!!
+                    <input id="3" type="radio" name="quiz" onclick="" value="3" />
+                    <span class="checkmark"></span>
+                </label>
+                <label id="label4" class="radiocontainer checkedlabel">
+                    Here Will Be The Question!!!
+                    <input id="4" type="radio" name="quiz" onclick="" value="4" />
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div id="answerbuttoncontainer">
+                <button class="answerbutton" type="submit">Submit</button>
+                <button class="answerbutton" type="submit" style="float: right">Next ❯</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if (--timer === 0) {
+                timer = duration;
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        var oneMinute = 60,
+            display = document.querySelector('#countdown');
+        startTimer(oneMinute, display);
+    };
+</script>

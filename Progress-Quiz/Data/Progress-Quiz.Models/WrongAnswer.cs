@@ -2,13 +2,13 @@
 
 namespace Progress_Quiz.Models
 {
-    public class Answer
+    public class WrongAnswer
     {
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(1)]
-        public string CorrectAnswer { get; set; }
+        [MaxLength(20)]
+        public string Answer { get; set; }
 
         public int QuestionId { get; set; }
 

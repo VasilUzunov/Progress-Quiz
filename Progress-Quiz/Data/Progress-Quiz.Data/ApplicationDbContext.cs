@@ -12,6 +12,8 @@ namespace Progress_Quiz.Data
 
         public DbSet<Question> Questions { get; set; }
 
-        public DbSet<Answer> Answers { get; set; }
+        public DbSet<CorrectAnswer> CorrectAnswers { get; set; }
+
+        public DbSet<WrongAnswer> WrongAnswers { get; set; }
     }
 }
