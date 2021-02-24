@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.3" />
@@ -13,6 +15,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Data\Progress-Quiz.Data\Progress-Quiz.Data.csproj" />
+    <ProjectReference Include="..\..\Progress-Quiz.Mapping\Progress-Quiz.Mapping.csproj" />
+    <ProjectReference Include="..\..\Services\Progress-Quiz.Services.Data\Progress-Quiz.Services.Data.csproj" />
   </ItemGroup>
 
 </Project>

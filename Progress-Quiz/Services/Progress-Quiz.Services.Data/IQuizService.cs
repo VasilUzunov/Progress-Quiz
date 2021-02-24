@@ -4,6 +4,10 @@ namespace Progress_Quiz.Services.Data
 {
     public interface IQuizService
     {
-        IEnumerable<T> GetAll<T>();
+        ICollection<AllQuestionsByCategory> GetAllHistoryQuestions();
+        ICollection<AllQuestionsByCategory> GetAllSportQuestions();
+        ICollection<AllQuestionsByCategory> GetAllAnimalsQuestions();
+        ICollection<AllQuestionsByCategory> GetAllMathQuestions();
+        ICollection<AllQuestionsByCategory> GetAllTechnologyQuestions();
     }
 }

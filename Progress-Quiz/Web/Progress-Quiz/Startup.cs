@@ -6,6 +6,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Progress_Quiz.Data;
+using Progress_Quiz.Mapping;
+using Progress_Quiz.Services.Data;
 
 namespace Progress_Quiz
 {
@@ -32,6 +34,10 @@ namespace Progress_Quiz
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddSingleton(this.configuration);
+
+            services.AddAutoMapper(typeof(QuestionsProfile).Assembly);
+
+            services.AddTransient<IQuizService, QuizService>();
         }
 
         [System.Obsolete]

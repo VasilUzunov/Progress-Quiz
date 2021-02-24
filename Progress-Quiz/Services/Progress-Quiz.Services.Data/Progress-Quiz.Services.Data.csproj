@@ -1,8 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>Progress_Quiz.Services.Data</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\Progress-Quiz.Data\Progress-Quiz.Data.csproj" />
+    <ProjectReference Include="..\..\Quiz.Models\Quiz.Models.csproj" />
+  </ItemGroup>
 
 </Project>
