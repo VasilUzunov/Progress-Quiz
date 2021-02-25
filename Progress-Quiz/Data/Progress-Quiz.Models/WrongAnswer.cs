@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Progress_Quiz.Models
+namespace Progress_Quiz.Data.Models
 {
     public class WrongAnswer
     {

@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Progress-Quiz.Models\Progress-Quiz.Models.csproj" />
+    <ProjectReference Include="..\Progress-Quiz.Models\Progress-Quiz.Data.Models.csproj" />
   </ItemGroup>
 
 </Project>

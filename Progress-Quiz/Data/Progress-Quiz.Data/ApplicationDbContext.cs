@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Progress_Quiz.Models;
+using Progress_Quiz.Data.Models;
 
 namespace Progress_Quiz.Data
 {

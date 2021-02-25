@@ -18,49 +18,13 @@ namespace Progress_Quiz.Services.Data
             this.mapper = mapper;
         }
 
-        public ICollection<AllQuestionsByCategory> GetAllHistoryQuestions()
+        public ICollection<AllQuestionsByCategory> GetAllQuestions()
         {
-            var history = this.context.Questions.Where(x => x.Category == "History")
+            var questions = this.context.Questions
                 .ProjectTo<AllQuestionsByCategory>(this.mapper.ConfigurationProvider)
                 .ToList();
 
-            return history;
-        }
-
-        public ICollection<AllQuestionsByCategory> GetAllSportQuestions()
-        {
-            var sport = this.context.Questions.Where(x => x.Category == "Sport")
-                .ProjectTo<AllQuestionsByCategory>(this.mapper.ConfigurationProvider)
-                .ToList();
-
-            return sport;
-        }
-
-        public ICollection<AllQuestionsByCategory> GetAllAnimalsQuestions()
-        {
-            var animals = this.context.Questions.Where(x => x.Category == "Animals")
-                .ProjectTo<AllQuestionsByCategory>(this.mapper.ConfigurationProvider)
-                .ToList();
-
-            return animals;
-        }
-
-        public ICollection<AllQuestionsByCategory> GetAllMathQuestions()
-        {
-            var math = this.context.Questions.Where(x => x.Category == "Math")
-                .ProjectTo<AllQuestionsByCategory>(this.mapper.ConfigurationProvider)
-                .ToList();
-
-            return math;
-        }
-
-        public ICollection<AllQuestionsByCategory> GetAllTechnologyQuestions()
-        {
-            var technology = this.context.Questions.Where(x => x.Category == "Technology")
-                .ProjectTo<AllQuestionsByCategory>(this.mapper.ConfigurationProvider)
-                .ToList();
-
-            return technology;
+            return questions;
         }
     }
 }

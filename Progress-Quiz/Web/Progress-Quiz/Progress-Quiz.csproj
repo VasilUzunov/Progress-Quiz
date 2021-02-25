@@ -16,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Data\Progress-Quiz.Data\Progress-Quiz.Data.csproj" />
     <ProjectReference Include="..\..\Progress-Quiz.Mapping\Progress-Quiz.Mapping.csproj" />
+    <ProjectReference Include="..\..\Quiz.Models\Progress-Quiz.Models.csproj" />
     <ProjectReference Include="..\..\Services\Progress-Quiz.Services.Data\Progress-Quiz.Services.Data.csproj" />
   </ItemGroup>
 

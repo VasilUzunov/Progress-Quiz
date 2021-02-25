@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Progress_Quiz.Models;
 
 namespace Progress_Quiz.Controllers
 {
@@ -21,8 +22,8 @@ namespace Progress_Quiz.Controllers
 
         public IActionResult Quiz()
         {
-            var history = quizService.GetAllHistoryQuestions();
-            return View();
+            var questions = quizService.GetAllQuestions();
+            return View(new QuestionsViewModel(questions));
         }
     }
 }

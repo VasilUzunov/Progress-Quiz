@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using AutoMapper;
+using Progress_Quiz.Data.Models;
 using Progress_Quiz.Models;
 
 namespace Progress_Quiz.Mapping

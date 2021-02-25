@@ -15,11 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Progress-Quiz", "Web\Progre
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Progress-Quiz.Data", "Data\Progress-Quiz.Data\Progress-Quiz.Data.csproj", "{D79A99F7-D8C8-4350-AB68-7AD960DA6148}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Progress-Quiz.Models", "Data\Progress-Quiz.Models\Progress-Quiz.Models.csproj", "{710F7A64-2543-4D27-8BD5-DCB6964F1DD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Progress-Quiz.Data.Models", "Data\Progress-Quiz.Models\Progress-Quiz.Data.Models.csproj", "{710F7A64-2543-4D27-8BD5-DCB6964F1DD8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{83284DB4-86D0-4091-B525-0AE727478713}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.Models", "Quiz.Models\Quiz.Models.csproj", "{57D795C4-EDCF-4096-B72D-B5456EE63D66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Progress-Quiz.Models", "Quiz.Models\Progress-Quiz.Models.csproj", "{57D795C4-EDCF-4096-B72D-B5456EE63D66}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Progress-Quiz.Mapping", "Progress-Quiz.Mapping\Progress-Quiz.Mapping.csproj", "{F41E00AF-1767-4A7F-A1DA-6FA9B7196F32}"
 EndProject
