@@ -1,42 +1,40 @@
 ﻿@model Progress_Quiz.Models.QuestionsViewModel
 <div class="container vertical-center container-fluid" style="width: 40%">
     <div>
-        <h1 id="category">Category</h1>
+        <h1 id="category"></h1>
     </div>
     <div id="quizmain">
-        <h3 id="questionNum">Question 1 of 5</h3>
+        @*<h3 id="questionNum">Question 1 of 5</h3>*@
         <p id="countdown" style="float: right; font-size: 30px"></p>
-        <p id="qtext">Question</p>
+        <p id="qtext"></p>
         <form>
             <div id="altcontainer">
                 <label id="label1" class="radiocontainer checkedlabel">
-                    Here Will Be The Question!!!
-                    <input id="1" type="radio" name="quiz" onclick="" value="1" />
+                    <input id="1" type="radio" name="quiz" onclick="" value="1"/>
                     <span class="checkmark"></span>
                 </label>
                 <label id="label2" class="radiocontainer checkedlabel">
-                    Here Will Be The Question!!!
-                    <input id="2" type="radio" name="quiz" onclick="" value="2" />
+                    <input id="2" type="radio" name="quiz" onclick="" value="2"/>
                     <span class="checkmark"></span>
                 </label>
                 <label id="label3" class="radiocontainer checkedlabel">
-                    Here Will Be The Question!!!
-                    <input id="3" type="radio" name="quiz" onclick="" value="3" />
+                    <input id="3" type="radio" name="quiz" onclick="" value="3"/>
                     <span class="checkmark"></span>
                 </label>
                 <label id="label4" class="radiocontainer checkedlabel">
-                    Here Will Be The Question!!!
-                    <input id="4" type="radio" name="quiz" onclick="" value="4" />
+                    <input id="4" type="radio" name="quiz" onclick="" value="4"/>
                     <span class="checkmark"></span>
                 </label>
             </div>
             <div id="answerbuttoncontainer">
                 <button class="answerbutton" type="submit">Submit</button>
-                <button class="answerbutton" type="submit" style="float: right">Next ❯</button>
+                <button class="answerbutton" type="submit" style="float: right; display: none">Next ❯</button>
             </div>
         </form>
     </div>
 </div>
 <script>
-    var questions =@JavaScriptConvert.SerializeObject(Model);
+    var questions= @JavaScriptConvert.SerializeObject(Model.Questions);
+    window.questions = questions;
 </script>
+<script src="~/js/site.js" asp-append-version="true"></script>
