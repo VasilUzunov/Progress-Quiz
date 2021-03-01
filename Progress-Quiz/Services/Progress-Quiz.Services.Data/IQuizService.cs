@@ -5,6 +5,6 @@ namespace Progress_Quiz.Services.Data
 {
     public interface IQuizService
     {
-        ICollection<AllQuestionsByCategory> GetAllQuestions();
+        ICollection<GetAllQuestions> GetAllQuestions();
     }
 }

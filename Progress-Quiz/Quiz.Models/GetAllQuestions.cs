@@ -5,7 +5,7 @@ using Progress_Quiz.Models;
 
 namespace Progress_Quiz.Models
 {
-    public class AllQuestionsByCategory
+    public class GetAllQuestions
     {
         public int Id { get; set; }
 

@@ -4,9 +4,9 @@ namespace Progress_Quiz.Models
 {
     public class QuestionsViewModel
     {
-        public IEnumerable<AllQuestionsByCategory> Questions { get; set; }
+        public IEnumerable<GetAllQuestions> Questions { get; set; }
 
-        public QuestionsViewModel(IEnumerable<AllQuestionsByCategory> questions)
+        public QuestionsViewModel(IEnumerable<GetAllQuestions> questions)
         {
             Questions = questions;
         }

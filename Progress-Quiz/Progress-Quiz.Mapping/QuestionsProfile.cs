@@ -10,7 +10,7 @@ namespace Progress_Quiz.Mapping
     {
         public QuestionsProfile()
         {
-            this.CreateMap<Question, AllQuestionsByCategory>()
+            this.CreateMap<Question, GetAllQuestions>()
                 .ForMember(x => x.WrongAnswers, y => y.MapFrom(x => x.WrongAnswers.ToList()))
                 .ForMember(x => x.CorrectAnswer, y => y.MapFrom(x => x.Answer.Answer));
         }

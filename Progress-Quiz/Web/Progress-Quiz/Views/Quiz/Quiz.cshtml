@@ -1,10 +1,11 @@
 ﻿@model Progress_Quiz.Models.QuestionsViewModel
-<div class="container vertical-center container-fluid" style="width: 40%">
+<div id="all" class="container vertical-center container-fluid div-main">
+    <a id="tryagain" asp-action="Quiz" asp-controller="Quiz" class="btn btn-primary center-element-right">Try Again</a>
     <div>
         <h1 id="category"></h1>
     </div>
     <div id="quizmain">
-        <p id="countdown" style="float: right; font-size: 30px"></p>
+        <p id="countdown" class="center-element-right" style="font-size: 30px"></p>
         <p id="qtext"></p>
         <form>
             <div id="altcontainer">
@@ -27,7 +28,7 @@
             </div>
             <div id="answerbuttoncontainer">
                 <button class="answerbutton" type="button">Submit</button>
-                <button class="answerbutton" type="submit" style="float: right; display: none">Next ❯</button>
+                <button class="answerbutton center-element-right" type="submit" style="display: none">Next ❯</button>
             </div>
         </form>
     </div>
@@ -37,3 +38,4 @@
     window.questions = questions;
 </script>
 <script src="~/js/site.js" asp-append-version="true"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 

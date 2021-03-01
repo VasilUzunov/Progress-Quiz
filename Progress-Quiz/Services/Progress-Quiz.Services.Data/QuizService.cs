@@ -18,10 +18,10 @@ namespace Progress_Quiz.Services.Data
             this.mapper = mapper;
         }
 
-        public ICollection<AllQuestionsByCategory> GetAllQuestions()
+        public ICollection<GetAllQuestions> GetAllQuestions()
         {
             var questions = this.context.Questions
-                .ProjectTo<AllQuestionsByCategory>(this.mapper.ConfigurationProvider)
+                .ProjectTo<GetAllQuestions>(this.mapper.ConfigurationProvider)
                 .ToList();
 
             return questions;

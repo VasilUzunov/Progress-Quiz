@@ -19,9 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Progress-Quiz.Data.Models",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{83284DB4-86D0-4091-B525-0AE727478713}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Progress-Quiz.Models", "Quiz.Models\Progress-Quiz.Models.csproj", "{57D795C4-EDCF-4096-B72D-B5456EE63D66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Progress-Quiz.Models", "Quiz.Models\Progress-Quiz.Models.csproj", "{57D795C4-EDCF-4096-B72D-B5456EE63D66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Progress-Quiz.Mapping", "Progress-Quiz.Mapping\Progress-Quiz.Mapping.csproj", "{F41E00AF-1767-4A7F-A1DA-6FA9B7196F32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Progress-Quiz.Mapping", "Progress-Quiz.Mapping\Progress-Quiz.Mapping.csproj", "{F41E00AF-1767-4A7F-A1DA-6FA9B7196F32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F73FFA8C-CA6A-42D6-A5B3-B7A67F49879D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Progress-Quiz.Services.Tests", "Progress-Quiz.Services.Tests\Progress-Quiz.Services.Tests.csproj", "{F4221044-B67A-4995-B6F2-726E9CE92D44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,10 @@ Global
 		{F41E00AF-1767-4A7F-A1DA-6FA9B7196F32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F41E00AF-1767-4A7F-A1DA-6FA9B7196F32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F41E00AF-1767-4A7F-A1DA-6FA9B7196F32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4221044-B67A-4995-B6F2-726E9CE92D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4221044-B67A-4995-B6F2-726E9CE92D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4221044-B67A-4995-B6F2-726E9CE92D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4221044-B67A-4995-B6F2-726E9CE92D44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +72,7 @@ Global
 		{710F7A64-2543-4D27-8BD5-DCB6964F1DD8} = {E64BAF18-F7EA-48F0-9ED1-5C0C5358827F}
 		{57D795C4-EDCF-4096-B72D-B5456EE63D66} = {83284DB4-86D0-4091-B525-0AE727478713}
 		{F41E00AF-1767-4A7F-A1DA-6FA9B7196F32} = {67EA99BE-2E6B-4F39-8E12-E60661D7BC1B}
+		{F4221044-B67A-4995-B6F2-726E9CE92D44} = {F73FFA8C-CA6A-42D6-A5B3-B7A67F49879D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0FB6667C-7FA8-4BEB-BD57-01AC49691A78}
